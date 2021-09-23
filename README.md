@@ -41,3 +41,10 @@ def distance_cartesian(x1, y1, x2, y2):
 
     return sqrt(dx * dx + dy * dy)
 ```
+
+## MAPEAMENTO.py
+
+Foi desenvolvido para realizar um mapeamento de rede FTTH através de uma planilha de Ponta A e Ponta B, indicando as conexões entre caixas de atendimento.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
