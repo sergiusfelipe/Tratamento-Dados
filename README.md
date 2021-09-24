@@ -46,5 +46,9 @@ def distance_cartesian(x1, y1, x2, y2):
 
 Foi desenvolvido para realizar um mapeamento de rede FTTH através de uma planilha de Ponta A e Ponta B, indicando as conexões entre caixas de atendimento.
 
+## ANALISE_CONDOMINIOS.py
+
+Utilizado para análise de sinergia entre duas bases de condomínios baseada nos nomes dos condomínios.
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
