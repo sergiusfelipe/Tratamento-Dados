@@ -159,43 +159,7 @@ def excel1():
 
         planilha1.to_excel(r'C:\Users\sergio.tavora\Desktop\DEMANDA CONDOMINIOS LUIS\TIX.xlsx')
         planilha2.to_excel(r'C:\Users\sergio.tavora\Desktop\DEMANDA CONDOMINIOS LUIS\MOB.xlsx')
-                
-        '''chave = []
-        var1 = tk.DoubleVar()
-        barra1 = ttk.Progressbar(root, variable = var1, maximum=len(planilha1.index),mode='determinate')
-        barra1.pack()
-        for i in range(0,len(planilha1.index)):
-            palvra = str(planilha1.loc[i,'KEY'])
-            cont = int(float(len(palvra))/2)
-            firstpart, secondpart = palvra[:cont], palvra[cont:]
-            if firstpart == secondpart:
-                chave.append(firstpart)
-            else:
-                chave.append(str(planilha1.loc[i,'KEY']))
-            #var1.set(i)
-            #root.update()
-        planilha1['KEY'] = chave
-        cruzamento = pds.merge(planilha1,planilha2,on='KEY',how='left')
-        print('Processamento 2 OK')
-        info = []
-        for j in range(0,len(cruzamento.index)):
-            #ANALISE DE INFORMACAO
-            if str(cruzamento.loc[j,'DescricaoStatusContrato']) == '' or str(cruzamento.loc[j,'DescricaoStatusContrato']) == 'nan' or str(cruzamento.loc[j,'DescricaoStatusContrato']) == str(cruzamento.loc[j,'IDContrato']):
-                info.append("S/I")
-            else:
-                info.append("OK")
-            
-            
-        cruzamento['INFO'] = info
-        writer = pds.ExcelWriter('ANALISE.xlsx', engine='xlsxwriter')
-        cruzamento.to_excel(writer, sheet_name='Sheet1', startrow=1, header=False, index=False)
-        workbook = writer.book
-        worksheet = writer.sheets['Sheet1']
-        (max_row, max_col) = cruzamento.shape
-        column_settings = [{'header': column} for column in cruzamento.columns]
-        worksheet.add_table(0, 0, max_row, max_col - 1, {'columns': column_settings})
-        worksheet.set_column(0, max_col - 1, 12)
-        writer.save()'''
+               
         concluido()
 
 if __name__ == "__main__":
